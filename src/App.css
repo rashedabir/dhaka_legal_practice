@@ -1,38 +1,308 @@
-.App {
-  text-align: center;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  font-family: "Poppins", sans-serif;
+  background-color: #ffffff;
+}
+a:hover {
+  color: #998947;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
+/*-----------------------header------------------------*/
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+header {
+  width: 100%;
+  overflow: hidden;
+  justify-content: space-around;
 }
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
+header .logo {
+  flex: 1;
+}
+ul li {
+  list-style: none;
+}
+ul li a {
+  text-decoration: none;
+  color: black;
+}
+header .header-content ul {
+  padding: 10px;
+  margin-top: 10px;
+}
+header ul li {
+  display: inline-block;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+  margin: 0 18px;
+  font-size: 1rem;
+  text-transform: uppercase;
+}
+.logo {
+  margin: auto 20px;
+}
+.logo h2 i {
+  margin-right: 3px;
+}
+.header-content ul li {
+  cursor: pointer;
+}
+.header-content ul li i {
+  margin: 5px;
+}
+.logo a {
+  text-decoration: none;
   color: white;
 }
-
-.App-link {
-  color: #61dafb;
+.menu {
+  display: none;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+/*------------------------------------home----------------------------------------*/
+
+.slide {
+  position: relative;
+}
+.slide img {
+  object-fit: cover;
+}
+.slide-detail {
+  color: #fff;
+  position: absolute;
+  top: 35%;
+  right: 35%;
+  text-align: center;
+  margin: auto;
+  text-transform: capitalize;
+}
+
+.service_icon {
+  font-size: 4rem;
+  color: #998947;
+}
+.service_link {
+  font-size: 0.9rem;
+  color: #998947;
+  text-decoration: none;
+}
+.service_link_by {
+  color: #998947;
+}
+.card {
+  border: none;
+}
+.services h2 {
+  text-transform: capitalize;
+  letter-spacing: 1.5px;
+  color: #494949;
+}
+
+.obj h2 {
+  color: #494949;
+}
+
+.objective {
+  background: url("https://s3.envato.com/files/207835390/DSC04843.JPG") center;
+  color: #fff;
+  background-size: cover;
+  background-position: center;
+  padding: 80px;
+}
+
+.consultation {
+  max-width: 600px;
+  border: 1px solid #eee;
+  padding: 20px;
+  background-color: white;
+}
+.consultation form button {
+  width: 100%;
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+}
+.consultation label {
+  text-transform: uppercase;
+}
+.con {
+  background-color: #e6e6e6;
+}
+
+.blog {
+  background-color: #f7f7f7;
+}
+.blogs {
+  padding: 10px;
+}
+.search-box {
+  background-color: white;
+  padding: 20px;
+  margin-top: 10px;
+}
+.recent-post {
+  background-color: white;
+  padding: 20px;
+  margin-top: 10px;
+}
+.slide_head {
+  background: url("https://vietnamlawandpractice.com/wp-content/uploads/2020/12/file-19.jpg")
+    fixed center;
+  background-size: cover;
+  background-position: center;
+  height: 180px;
+  text-align: center;
+  margin: auto;
+}
+.slide_head h2 {
+  color: white;
+  padding-top: 80px;
+}
+.blog_detail {
+  background-color: white;
+  padding: 20px;
+  height: 100%;
+}
+
+/*--------------------------footer-----------------------*/
+
+footer {
+  background-color: #181818;
+  color: white;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+}
+footer p {
+  font-size: 13px;
+  margin-top: 20px;
+}
+footer i {
+  font-size: 17px;
+}
+.social {
+  padding: 0 5px;
+  font-size: 25px;
+}
+
+/*----------------------contact-----------------------*/
+
+.contact {
+  min-height: 74vh;
+  background: url("http://www.safeholidaybd.com/wp-content/uploads/2017/09/contactus.jpg")
+    fixed no-repeat;
+  background-position: center;
+  background-attachment: fixed;
+  color: black;
+  opacity: 0.98;
+}
+.contact h4 {
+  padding: 10px 0;
+  border-bottom: 2px solid white;
+  width: 100%;
+}
+.contact p {
+  margin-bottom: -2px;
+}
+.contact form label {
+  color: #181818;
+}
+.contact form button {
+  width: 100%;
+  padding: 10px 0;
+  text-transform: capitalize;
+  letter-spacing: 1.5px;
+}
+
+/*----------------------------------resposive-------------------------------------------*/
+
+@media (max-width: 990px) {
+  .form {
+    margin-top: 40px;
   }
-  to {
-    transform: rotate(360deg);
+}
+
+@media (max-width: 820px) {
+  header .logo {
+    min-width: 115px;
+    flex: none;
   }
+  header ul {
+    padding: 10px 0;
+  }
+  .slide-detail {
+    color: #fff;
+    position: absolute;
+    top: 35%;
+    right: 25%;
+    text-align: center;
+    margin: auto;
+    text-transform: capitalize;
+  }
+  footer p {
+    font-size: 15px;
+    margin-top: 0;
+  }
+  .social {
+    padding: 0 5px;
+    font-size: 35px;
+  }
+}
+
+@media only screen and (max-width: 520px) {
+  header ul {
+    position: fixed;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: #fff;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    opacity: 0.98;
+    z-index: 99;
+    transition: 0.5s ease-in;
+  }
+  header .menu {
+    display: block;
+    cursor: pointer;
+    font-size: 25px;
+    font-weight: 800;
+    padding-left: 10px;
+  }
+  .menu_bar {
+    background-color: #998947;
+    padding: 0 10px;
+    color: white;
+    border-radius: 3px;
+  }
+  .cross {
+    position: absolute;
+    top: 5px;
+    right: 0;
+    font-size: 25px;
+    font-weight: 800;
+  }
+  header {
+    justify-content: space-between;
+  }
+  header .header-content ul {
+    padding: 0px;
+    margin-top: 0px;
+  }
+  .slide-detail {
+    color: #fff;
+    position: absolute;
+    top: 35%;
+    right: 15%;
+    text-align: center;
+    margin: auto;
+    text-transform: capitalize;
+  }
+}
+
+.icon {
+  font-size: 25px;
 }
