@@ -17,6 +17,8 @@ header {
   width: 100%;
   overflow: hidden;
   justify-content: space-around;
+  background-color: #20222c;
+  padding: 5px 50px;
 }
 header .logo {
   flex: 1;
@@ -26,7 +28,7 @@ ul li {
 }
 ul li a {
   text-decoration: none;
-  color: black;
+  color: white;
 }
 header .header-content ul {
   padding: 10px;
@@ -76,7 +78,9 @@ header ul li {
   margin: auto;
   text-transform: capitalize;
 }
-
+.social_icon{
+  margin: 10px;
+}
 .service_icon {
   font-size: 4rem;
   color: #998947;
@@ -275,7 +279,63 @@ footer i {
     left: -100%;
     width: 100%;
     height: 100%;
-    background: #fff;
+    background: #181818;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    opacity: 0.98;
+    z-index: 99;
+    transition: 0.5s ease-in;
+  }
+  header .menu {
+    display: block;
+    cursor: pointer;
+    font-size: 25px;
+    font-weight: 800;
+    padding-left: 10px;
+  }
+  .menu_bar {
+    background-color: #998947;
+    padding: 0 10px;
+    color: white;
+    border-radius: 3px;
+  }
+  .cross {
+    position: absolute;
+    top: 5px;
+    right: 0;
+    font-size: 25px;
+    font-weight: 800;
+    color: #fff;
+  }
+  header {
+    justify-content: space-between;
+    padding: 0 20px;
+  }
+  header .header-content ul {
+    padding: 0px;
+    margin-top: 0px;
+  }
+  .slide-detail {
+    color: #fff;
+    position: absolute;
+    top: 35%;
+    right: 15%;
+    text-align: center;
+    margin: auto;
+    text-transform: capitalize;
+  }
+}
+
+@media only screen and (max-width: 990px) {
+  header ul {
+    position: fixed;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: #181818;
     display: flex;
     flex-direction: column;
     justify-content: space-around;

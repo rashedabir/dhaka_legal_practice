@@ -1,16 +1,49 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
+import { motion } from "framer-motion";
 
 function Header() {
   const [menu, setMenu] = useState(false);
+
+  const navbar_varient = {
+    hidden: {
+      y: "-30px",
+      opacity: 0,
+    },
+    visible: {
+      y: 0,
+      opacity: 1,
+      transition: {
+        delay: 0.2,
+        duration: 0.7,
+        type: "spring",
+      },
+    },
+  };
+
+  const navbar_varient1 = {
+    hidden: {
+      x: "-20vw",
+      opacity: 0,
+    },
+    visible: {
+      x: 0,
+      opacity: 1,
+      transition: {
+        delay: 0.2,
+        duration: 1,
+        type: "spring",
+      },
+    },
+  };
 
   const styleMenu = {
     left: menu ? 0 : "-100%",
   };
 
   return (
-    <header className="container d-flex justify-content-between align-items-center">
-      <div>
+    <header className="d-flex justify-content-between align-items-center">
+      <motion.div variants={navbar_varient1} initial="hidden" animate="visible">
         <Link to="/">
           <img
             width="80px"
@@ -18,8 +51,13 @@ function Header() {
             alt="logo"
           />
         </Link>
-      </div>
-      <div className="header-content">
+      </motion.div>
+      <motion.div
+        variants={navbar_varient}
+        initial="hidden"
+        animate="visible"
+        className="header-content"
+      >
         <ul style={styleMenu}>
           <li onClick={() => setMenu(!menu)}>
             <Link to="/">home</Link>
@@ -40,7 +78,7 @@ function Header() {
             <i className="fas fa-times"></i>
           </li>
         </ul>
-      </div>
+      </motion.div>
       <div className="menu menu_bar" onClick={() => setMenu(!menu)}>
         <i className="fas fa-bars icon"></i>
       </div>
