@@ -133,16 +133,7 @@ function Slide() {
             exit="exit"
             className="slide_detail"
           >
-            <h1
-              style={{
-                fontSize: "5rem",
-                marginTop: "-25px",
-                padding: "0 20px",
-                color: "#9b8b48",
-              }}
-            >
-              |{" "}
-            </h1>
+            <h1 className="by">|</h1>
 
             <h1>
               <Typed
