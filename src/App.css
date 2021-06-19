@@ -78,6 +78,16 @@ header ul li {
   margin: auto;
   text-transform: capitalize;
 }
+.slide_detail {
+  color: #fff;
+  position: absolute;
+  top: 45%;
+  left: 5%;
+  text-align: center;
+  margin: auto;
+  text-transform: capitalize;
+  display: flex;
+}
 .social_icon{
   margin: 10px;
 }
